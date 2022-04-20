@@ -516,6 +516,10 @@ bool ModelImporter::supportsOperator(const char* op_name) const
     {
         return true;
     }
+    if (std::string(op_name) == "DisentangledAttentionPlugin")
+    {
+        return true;
+    }
     return _op_importers.count(op_name);
 }
 bool ModelImporter::parseWithWeightDescriptors(void const* serialized_onnx_model, size_t serialized_onnx_model_size)
