@@ -512,11 +512,7 @@ bool ModelImporter::supportsOperator(const char* op_name) const
     {
         return false;
     }
-    if (std::string(op_name) == "EfficientNMS_TRT" || std::string(op_name) == "PyramidROIAlign_TRT" || std::string(op_name) == "MultilevelCropAndResize_TRT")
-    {
-        return true;
-    }
-    if (std::string(op_name) == "DisentangledAttentionPlugin")
+    if (std::string(op_name) == "EfficientNMS_TRT" || std::string(op_name) == "PyramidROIAlign_TRT" || std::string(op_name) == "MultilevelCropAndResize_TRT" || std::string(op_name) == "DisentangledAttention_TRT")
     {
         return true;
     }
